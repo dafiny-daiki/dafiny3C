@@ -1,28 +1,28 @@
 <!DOCTYPE html>
   <html lang="PT-BR">
-     <head>
-       <style>
-         .texto{
-           color: black;
-         }
-         .campo{
-           border: 1px solid white;
-         }
-         fieldset{
-           border: 1px solid blue;
-           background-color: #40E0D0;
-         }
-         legend{
-           color: black;
-         }
-         .botao{
-           background-color: #47A6CC;
-           color: white;
-         }
-         body{
-           background-color: #7FFFD4;
-         }
-       </style>
+      <head>
+          <style>
+              .texto{
+                color: red;
+              }
+              .campo{
+                border:1px solid red;
+              }
+              fieldset{
+                border:1px solid red;
+                background-color: yellow;
+              }
+              legend{
+                color: red;
+              }
+              .botao{
+                background-color: green;
+                color: white;
+              }
+              body{
+                background-color: pink;
+              }
+          </style>
         <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import {
@@ -32,13 +32,12 @@
     } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
     const firebaseConfig = {
-        apiKey: "AIzaSyCweRM1FLRA9rmhinBleiGNQm1T6tQYw2w",
-  authDomain: "projeto3c-616ef.firebaseapp.com",
-  projectId: "projeto3c-616ef",
-  storageBucket: "projeto3c-616ef.firebasestorage.app",
-  messagingSenderId: "19545240536",
-  appId: "1:19545240536:web:87847be5853f467dbc38ad",
-  measurementId: "G-WNWLEWZ3C1"
+       apiKey: "AIzaSyD9jzWftXtUutjeS0qxDbWyMgbKc3CDD4w",
+  authDomain: "projeto3c-a6f4a.firebaseapp.com",
+  projectId: "projeto3c-a6f4a",
+  storageBucket: "projeto3c-a6f4a.firebasestorage.app",
+  messagingSenderId: "395104212809",
+  appId: "1:395104212809:web:d30515d5c64d00fc8fac98"
     };
 
     const app = initializeApp(firebaseConfig);
@@ -53,12 +52,12 @@
       const nome = document.getElementById("nome").value;
       const cep = document.getElementById("cep").value;
       const cpf = document.getElementById("cpf").value;
-      const data_nacimento = document.getElementById("data_nacimento").value;
+      const data_nascimento = document.getElementById("data_nascimento").value;
       const email = document.getElementById("email").value;
       const foto = document.getElementById("foto").value;
       const idade = document.getElementById("idade").value;
       const rg = document.getElementById("rg").value;
-      
+      const senha = document.getElementById("senha").value;
       const telefone = document.getElementById("telefone").value;
 
       try {
@@ -66,7 +65,7 @@
           nome,
           cep,
           cpf,
-          data_nacimento,
+          data_nascimento,
           email,
           foto,
           idade,
@@ -84,24 +83,23 @@
       }
     });
   </script>
-     </head>
-    <body>
-      <form id="formulario">
-      <fieldset>
-          <legend>Cadastro de Usuarios</legend>
-                    <p class="texto">NOME COMPLETO:</p> <input type="text" id="nome" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
+      </head>
+      <body>
+          <form id="formulario">
+                <fieldset>
+                    <legend>CADASTRO DE USUARIOS</legend>
+                    <p class="texto">NOME COMPLETO:</p> <input type="text"  id="nome" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
                     <p class="texto">CEP:</p> <input type="text" id="cep" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
-                    <p class="texto">CPF: </p><input type="text" id="cpf" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
-                    <p class="texto">DATA DE NASCIMENTO:</p> <input type="text" id="data de nacimento" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
+                    <p class="texto">CPF:</p> <input type="text" id="cpf" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
+                    <p class="texto">DATA DE NASCIMENTO:</p> <input type="text" id="data_nascimento" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
                     <p class="texto">EMAIL:</p> <input type="text" id="email" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
                     <p class="texto">FOTO:</p> <input type="text" id="foto" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
-                    <p class="texto">IDADE: </p><input type="text" id="idade" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
+                    <p class="texto">IDADE:</p> <input type="text" id="idade" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
                     <p class="texto">RG:</p> <input type="text" id="rg" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
-                    <p class="texto">SENHA: </p><input type="text" id="senha" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
-                    <p class="texto">TELEFONE:</p><input type="text" id="telefone" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" requ ired><br> 
-              <input type="submit" value="Cadastrar">
-      </fieldset>
-      </form>
-  </body>
-</html>
-  
+                    <p class="texto">SENHA:</p> <input type="text" id="senha" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
+                    <p class="texto">TELEFONE:</p> <input type="text" id="telefone" class="campo" placeholder="Nome de usuario" minlength="10" maxlength="20" id="nome" class="nome" name="nome" required><br>
+                    <input type="submit" value="Cadastrar">
+                </fieldset>
+          </form>
+      </body>
+  </html>
